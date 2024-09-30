@@ -1,22 +1,12 @@
 package com.nashtech
 package bootstrap
-
+import com.nashtech.db.DBConnection
 import akka.actor.{ActorSystem, Props}
-import scalikejdbc.DBConnection
+import com.nashtech.models.Order
+import com.nashtech.parsers.Parsers
+import scalikejdbc._
 
 object Main extends App {
-  // Initialize DB connection
-  DBConnection.init()
+ implicit val session: DBSession = DBConnection.session
 
-  val system = ActorSystem("EcommerceSystem")
-
-  // Create an OrderActor
-  val orderActor = system.actorOf(Props(new OrderActor("order-1")), "order-actor")
-
-  // Send PlaceOrder and ShipOrder commands to the actor
-  orderActor ! OrderActor.PlaceOrder("user-1", "order-1", List("apple", "banana"))
-  orderActor ! OrderActor.ShipOrder("order-1")
-
-  // Shutdown the system
-  system.terminate()
 }

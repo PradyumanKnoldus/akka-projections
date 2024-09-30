@@ -1,7 +1,13 @@
 package com.nashtech
 package models
 
-case class Order(orderId: String, item: String, quantity: Int)
+case class Order(
+                  orderId: String,
+                  userId: String,
+                  items: List[String],
+                  status: String,
+                  timestamp: Long
+                )
 
 // Events to be processed by the projection
 sealed trait OrderEvent
