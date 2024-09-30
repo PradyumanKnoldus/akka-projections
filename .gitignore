@@ -1,0 +1,47 @@
+# IntelliJ IDEA related files
+.idea/
+*.iws
+*.iml
+*.ipr
+.idea_modules/
+out/
+*.class
+*.log
+*.hprof
+*.swp
+*.swo
+*.DS_Store
+atlassian-ide-plugin.xml
+workspace.xml
+target/
+logs/
+coverage/
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/dictionaries
+.idea/**/shelf
+.idea/sbt.xml
+.idea/compiler.xml
+.idea/copyright/profiles_settings.xml
+.idea/encodings.xml
+.idea/misc.xml
+
+# SBT
+target/
+lib_managed/
+src_managed/
+project/target/
+project/project/
+.history
+
+# Scala
+*.class
+*.log
+*.cache
+*.project
+*.classpath
+*.settings/
+*.idea/
+*.DS_Store
+.bsp/
+
