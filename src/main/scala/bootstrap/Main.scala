@@ -1,13 +1,7 @@
 package com.nashtech
-package nashtech
+package bootstrap
 
-package com.ecommerce
-
-import akka.actor.ActorSystem
-import nashtech.db.DBConnection
-import nashtech.dao.OrderDAO
-import nashtech.actors.OrderActor
-import akka.actor.Props
+import akka.actor.{ActorSystem, Props}
 import scalikejdbc.DBConnection
 
 object Main extends App {
