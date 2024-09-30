@@ -9,10 +9,5 @@ case class Order(
                   timestamp: Long
                 )
 
-// Events to be processed by the projection
-sealed trait OrderEvent
-case class OrderCreated(orderId: String, item: String, quantity: Int) extends OrderEvent
-case class OrderUpdated(orderId: String, item: String, quantity: Int) extends OrderEvent
-
 
 
